@@ -1,0 +1,9 @@
+safe: true
+timezone: Europe/Stockholm
+
+title: What would Nobel do?
+description: testdescription
+live_url: http://whatwouldnobeldo.org
+live_hostname: whatwouldnobeldo.org
+email: info@whatwouldnobeldo.org
+google_analytics_id: UA-44039901-1
