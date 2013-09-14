@@ -63,13 +63,8 @@ a:hover { border-bottom-style: solid; }
 #footer {
 	border-top: 0.1em solid #dbd9d7;
 	padding-top: 1em;
-	overflow: hidden;
+	text-align: right;
 }
-	#footer a { float: left; }
-	#footer .right {
-		float: right;
-		margin-left: 1em;
-	}
 
 @media screen and (max-width: 40em) {
 	body { padding: 1em; }
