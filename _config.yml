@@ -2,7 +2,7 @@ safe: true
 timezone: Europe/Stockholm
 
 title: What would Nobel do?
-description: testdescription
+description: Nowhere in his last will did Alfred Nobel himself mention any prize in the so called “economic sciences.” There is no Nobel Prize in economics.
 live_url: http://whatwouldnobeldo.org
 live_hostname: whatwouldnobeldo.org
 email: info@whatwouldnobeldo.org
