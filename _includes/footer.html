@@ -1,5 +1,18 @@
 <div id="footer">
-	<a href="mailto:{{ site.email }}" target="_blank">{{ site.email }}</a>
+	<a class="email" href="mailto:{{ site.email }}" target="_blank">{{ site.email }}</a>
+	<div class="share">
+		<div class="tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-text="{{ site.tweet_text }}">Tweet</a></div>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		<div class="plusone"><div class="g-plusone" data-size="medium"></div></div>
+		<script>
+		(function() {
+			var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+			po.src = 'https://apis.google.com/js/plusone.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		})();
+		</script>
+		<div class="fb-like" data-href="{{ site.live_url }}{{ page.url | remove:'index.html' }}" data-send="false" data-width="704" data-show-faces="false"></div>
+	</div>
 </div>
 </div>
 </body>

@@ -12,10 +12,24 @@ body {
 }
 
 #header {
+	position: relative;
 	background: url(../img/header.png) right top no-repeat;
 	min-height: 290px;
 	border-bottom: 0.5em solid black;
 }
+
+#header .share {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	padding-bottom: 0.2em;
+}
+	.share .tweet {
+		float: left;
+		padding: 0 0 0.2em 10px;
+	}
+
+	.share .plusone { float: left; }
 
 h1, h2 {
 	background-color: #f6f3f0;
@@ -66,6 +80,10 @@ a:hover { border-bottom-style: solid; }
 	padding-top: 1em;
 	text-align: right;
 }
+	.email {
+		float: right;
+		margin-bottom: 1em;
+	}
 
 @media screen and (max-width: 46em) {
 	body { padding: 1em; }
