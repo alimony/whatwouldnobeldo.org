@@ -115,3 +115,4 @@ Source: https://en.wikipedia.org/wiki/List_of_Nobel_laureates_in_Economics
 		Christopher A. Sims
 
 2012	Alvin E. Roth
+		Lloyd S. Shapley
