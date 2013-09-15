@@ -70,9 +70,5 @@ a:hover { border-bottom-style: solid; }
 @media screen and (max-width: 40em) {
 	body { padding: 1em; }
 	blockquote { margin: 0 -1.11111111111em; }
-	p, blockquote {
-		-webkit-hyphens: auto;
-		-moz-hyphens: auto;
-		hyphens: auto;
-	}
+}
 }
