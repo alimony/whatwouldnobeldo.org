@@ -67,7 +67,7 @@ a:hover { border-bottom-style: solid; }
 	text-align: right;
 }
 
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 46em) {
 	body { padding: 1em; }
 	blockquote { margin: 0 -1.11111111111em; }
 }
