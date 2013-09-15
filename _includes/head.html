@@ -11,7 +11,7 @@
 	<meta property="og:url" content="{{ site.live_url }}{{ page.url | remove:'index.html' }}" />
 	<meta property="og:image" content="{{ site.live_url }}/img/whatwouldnobeldo-200x200px.jpg" />
 	<meta property="og:site_name" content="{{ site.title }}" />
-	<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+	<meta property="og:description" content="{% if page.opengraph_description %}{{ page.opengraph_description }}{% else %}{{ site.opengraph_description }}{% endif %}" />
 	<link rel="stylesheet" href="/css/style.1.css" />
 	<link rel="canonical" href="{{ site.live_url }}{{ page.url | remove:'index.html' }}" />
 	<script>
