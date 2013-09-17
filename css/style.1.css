@@ -32,7 +32,7 @@ body {
 	.share .plusone { float: left; }
 
 h1, h2 {
-	background-color: #f6f3f0;
+	background-color: #f6f3f0; /* Fallback */
 	background-color: rgba(246, 243, 240, 0.75);
 	display: inline-block;
 	padding-right: 0.3em;
@@ -57,13 +57,20 @@ blockquote {
 	font-size: 90%;
 	margin: 0;
 	padding: 1em 1.11111111111em;
-	border-color: #8f8d8c;
+	background-color: #eae7e5; /* Fallback */
+	background-color: rgba(219, 217, 215, 0.5);
+	border-color: #acaba9; /* Fallback */
 	border-color: rgba(117, 116, 115, 0.5);
 	border-style: solid;
 	border-width: 0 0.555555555556em;
-	background-color: #dbd9d7;
-	background-color: rgba(219, 217, 215, 0.5);
 }
+
+	blockquote.golden {
+		background-color: #ebcf9d; /* Fallback */
+		background-color: rgba(224, 172, 74, 0.5);
+		border-color: #cca96b; /* Fallback */
+		border-color: rgba(174, 133, 58, 0.5);
+	}
 
 a {
 	color: black;
