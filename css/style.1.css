@@ -19,10 +19,8 @@ body {
 }
 
 #header .share {
-	position: absolute;
 	width: 100%;
 	bottom: 0;
-	padding-bottom: 0.2em;
 }
 	.share .tweet {
 		float: left;
@@ -30,6 +28,12 @@ body {
 	}
 
 	.share .plusone { float: left; }
+
+.share {
+	position: absolute;
+	margin-left: -11px;
+	padding-bottom: 0.2em;
+}
 
 h1, h2 {
 	background-color: #f6f3f0; /* Fallback */
@@ -86,6 +90,7 @@ a:hover { border-bottom-style: solid; }
 	border-top: 0.1em solid #dbd9d7;
 	padding-top: 1em;
 	text-align: right;
+	overflow: hidden;
 }
 	.email {
 		float: right;
