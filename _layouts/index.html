@@ -33,10 +33,14 @@
 		border-bottom: 0.5em solid black;
 	}
 
-	#header .share {
+	.share {
+		position: absolute;
+		margin-left: -11px;
+		padding-bottom: 0.2em;
 		width: 100%;
-		bottom: 0;
+		overflow: hidden;
 	}
+
 		.share .tweet {
 			float: left;
 			padding: 0 0 0.2em 10px;
@@ -44,11 +48,28 @@
 
 		.share .plusone { float: left; }
 
-	.share {
-		position: absolute;
-		margin-left: -11px;
-		padding-bottom: 0.2em;
+	#header .share { bottom: 0; }
+
+	#footer .share { top: 1em; }
+
+	#menu {
+		border-bottom: 0.1em solid #dbd9d7;
+		text-align: right;
+		height: 2.5em;
+		line-height: 2.7em;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 90%;
 	}
+		#menu a { border: 0; }
+
+			#menu a:hover:before {
+				content: "↯";
+				font-size: 150%;
+				position: absolute;
+				width: 1em;
+				margin-left: -1em;
+			}
 
 	h1, h2 {
 		background-color: #f6f3f0; /* Fallback */
@@ -72,6 +93,11 @@
 		margin: 1em 0 0 0;
 	}
 
+	h3 {
+		color: #5c5b5a;
+		font-size: 100%;
+	}
+
 	blockquote {
 		font-size: 90%;
 		margin: 0;
@@ -91,6 +117,13 @@
 			border-color: rgba(174, 133, 58, 0.5);
 		}
 
+	blockquote + blockquote { margin: 1em 0; }
+
+	blockquote .right {
+		font-size: 90%;
+		text-align: right;
+	}
+
 	a {
 		color: black;
 		text-decoration: none;
@@ -101,20 +134,30 @@
 
 	.larger { font-size: 120%; }
 
+	.box { border-top: 0.1em solid #dbd9d7; }
+
+	#hayek { margin: 1em 0; }
+
 	#footer {
 		border-top: 0.1em solid #dbd9d7;
 		padding-top: 1em;
+		padding-bottom: 1em;
 		text-align: right;
 		overflow: hidden;
+		position: relative;
 	}
 		.email {
 			float: right;
 			margin-bottom: 1em;
+			position: relative;
+			z-index: 2;
 		}
 
 	@media screen and (max-width: 46em) {
 		body { padding: 1em; }
 		blockquote { margin: 0 -1.11111111111em; }
+		#footer { padding-bottom: 0; }
+		#footer .share { position: static; }
 	}
 
 	@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
@@ -166,18 +209,22 @@
 		</div>
 	</div>
 
+	<div id="menu">
+		<a href="#laureates">Letters from the laureates</a>
+	</div>
+
 	<p>Nowhere in his last will did Alfred Nobel himself mention any prize in the so called “economic sciences.” This prize was in fact created by the Swedish Central Bank in 1968 – more than 70 years after Nobel’s death. The cleverly named “Prize in Economic Sciences in Memory of Alfred Nobel” was of course too much of a mouthful to avoid its obvious destiny of being shortened to a “Nobel Prize in Economics”. Under&shy;standably so in popular speech, but more worri&shy;some by the media and other insti&shy;tutions of critical and investi&shy;gative repu&shy;tation.</p>
 
 	<blockquote>In 1968, Sveriges Riksbank (Sweden’s central bank) established the Prize in Economic Sciences in Memory of Alfred Nobel, founder of the Nobel Prize. The Prize is based on a donation received by the Nobel Foundation in 1968 from Sveriges Riksbank on the occasion of the Bank’s 300th anni&shy;versary.<br />
-	– <a href="http://www.nobelprize.org/nobel_prizes/economic-sciences/" target="_blank">The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel</a><br />
-	<em>Nobelprize.org</em>. Nobel Media AB 2013. Web. 12 Aug 2013.</blockquote>
+	<div class="right">– <a href="http://www.nobelprize.org/nobel_prizes/economic-sciences/" target="_blank">The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel</a><br />
+	<em>Nobelprize.org</em>. Nobel Media AB 2013. Web. 12 Aug 2013.</div></blockquote>
 
 	<p>The nomination criteria, selection process, prize money, and presen&shy;tation of the prize in economics are all care&shy;fully matched to those of the Nobel Prizes, to the point where they are hard to distin&shy;guish from each other. And so, for many years has the late coming prize in economics basked in the reflected glory of the five actual Nobel Prizes, the ones speci&shy;fied by Alfred Nobel in his testa&shy;ment. Never without contro&shy;versy though, as noted by the former chair&shy;man of the Nobel Foundation:</p>
 
 	<blockquote>Every now and then there are proposals to establish additional Nobel Prizes, for example in Mathematics or Environ&shy;mental science. The foundation as well as the prize juries have rejected such requests. They consider them&shy;selves bound by the test&shy;ament, wondering what it would lead to if new Nobel Prizes or equi&shy;valents were created. […] However, this principle has been departed from on one occasion, regarding the prize in economics. This prize must not be treated as a Nobel Prize and is for this reason titled Prize in Economic Sciences in Memory of Alfred Nobel. […] There was considerable doubt among the Nobel committees about accepting the prize. Propa&shy;ganda activities were intense, especially from the Governor of the Central Bank, Per Åsbrink. […] The prize in economics has continued causing contro&shy;versy.<br />
-	– Lars Gyllensten, former chairman of the Nobel Foundation<br />
+	<div class="right">– Lars Gyllensten, former chairman of the Nobel Foundation<br />
 	<em>Minnen, bara minnen</em> (Stockholm: Albert Bonniers förlag, 2000), page&nbsp;281<br />
-	(Translated from Swedish)</blockquote>
+	(Translated from Swedish)</div></blockquote>
 
 	<!-- This is the above quote in its original wording in Swedish:
 	Då och då kommer förslag om att man borde inrätta ytterligare Nobelpris, till exempel i matematik eller i miljövård. Stiftelsen, liksom prisutdelarna, har avvisat sådana propåer. Man har ansett sig bunden av testamentet – och frågar sig också var man skulle hamna om man släppte fram nya Nobelpris eller motsvarande pris. […] I ett avseende har man emellertid frångått principen och inrättat ett nytt pris. Det gäller ekonomipriset. Det skall inte likställas med ett Nobelpris och kallas också Pris i ekonomiska vetenskaper till Alfreds Nobels minne. […] Det rådde stor tveksamhet inom Nobelinstanserna till att acceptera priset. Propagandaverksamheten för priset var intensiv, särskilt från riksbankschefen Per Åsbrinks sida. […] Ekonomipriset har också fortsättningsvis varit kontroversiellt. -->
@@ -195,12 +242,38 @@
 	<p>The last will of Alfred Nobel clearly states the five areas in which a prize was to be awarded, namely physics, chemistry, physiology or medicine, literature, and peace:</p>
 
 	<blockquote>The whole of my remaining realizable estate shall be dealt with in the following way: the capital, invested in safe securities by my executors, shall constitute a fund, the interest on which shall be annually distributed in the form of prizes to those who, during the preceding year, shall have conferred the greatest benefit to mankind. The said interest shall be divided into <strong>five</strong> equal parts, which shall be apportioned as follows: one part to the person who shall have made the most important discovery or invention within the field of <strong>physics</strong>; one part to the person who shall have made the most important <strong>chemical discovery or improvement</strong>; one part to the person who shall have made the most important discovery within the domain of <strong>physiology or medicine</strong>; one part to the person who shall have produced in the field of <strong>literature</strong> the most outstanding work in an ideal direction; and one part to the person who shall have done the most or the best work for <strong>fraternity between nations, for the abolition or reduction of standing armies and for the holding and promotion of peace congresses</strong>. The prizes for physics and chemistry shall be awarded by the Swedish Academy of Sciences; that for physio&shy;logical or medical work by the Caroline Institute in Stockholm; that for literature by the Academy in Stockholm, and that for champions of peace by a committee of five persons to be elected by the Norwegian Storting. It is my express wish that in awarding the prizes no consideration whatever shall be given to the nation&shy;ality of the candi&shy;dates, but that the most worthy shall receive the prize, whether he be a Scandi&shy;navian or not.<br />
-	– <a href="http://www.nobelprize.org/alfred_nobel/will/will-full.html" target="_blank">“Full text of Alfred Nobel’s Will”</a><br />
-	<em>Nobelprize.org</em>. Nobel Media AB 2013. Web. 12 Aug 2013.</blockquote>
+	<div class="right">– <a href="http://www.nobelprize.org/alfred_nobel/will/will-full.html" target="_blank">“Full text of Alfred Nobel’s Will”</a><br />
+	<em>Nobelprize.org</em>. Nobel Media AB 2013. Web. 12 Aug 2013.</div></blockquote>
 
 	<p>Alfred Nobel did not mention any prize in economics.</p>
 
 	<p class="larger">For this simple reason, <strong>there is no Nobel Prize in Economic Sciences</strong>.</p>
+
+	<div id="laureates" class="box">
+		<h3>Letters from the laureates</h3>
+		<p>A summa&shy;rized version of the above was sent to <em>all previous reci&shy;pients</em> of the prize in economics, of which about a dozen replied, with varying degrees of amusement. At least two academic insti&shy;tutions updated their websites, changing phrases such as “Nobel Prize in Economics” to the more proper “Prize in Economics”, as a direct result of receiving this letter. Here are some excerpts on what the laureates had to say:</p>
+		<blockquote>I am, of course, aware that the Prize in Economic Sciences is not a Nobel Prize. […]<br />
+		I personally have not encountered any confusion about the matter.</blockquote>
+		<blockquote>[W]hat it is that you are insinuating. Is the Prize in Economic Sciences inferior to the “real” Nobel Prizes because it was not envisaged by Alfred Nobel himself?</blockquote>
+		<blockquote>Everyone I know knows that it is a memorial prize.</blockquote>
+		<blockquote>It is in fact a “Nobel prize”, just not established and financed in the same way as the others.</blockquote>
+		<blockquote>We are aware of this distinction and that the prize for economics was added later.</blockquote>
+		<blockquote>Most of my colleagues and the administration at Berkeley make no distinction.</blockquote>
+		<blockquote>Of course, I am aware of the distinction.</blockquote>
+		<blockquote>Of course, I am aware of the background and of the official name of the “Nobel Prize” in economic sciences.</blockquote>
+		<blockquote>I haven’t been troubled by this, which seems to be well known.</blockquote>
+		<blockquote>Thank you for your note; we are aware of this situation.</blockquote>
+		<blockquote>Still, you are right in pointing out inaccuracies on our website, which is why I have changed several of the webpages to reflect the official name of the Prize.</blockquote>
+		<blockquote>We have updated our information, thank you.</blockquote>
+	</div>
+
+	<div class="box">
+		<p>The common view among laureates of the prize in economics is that its origin and status versus the Nobel Prizes is known and all clear. But did <em>you</em> know about its background?</p>
+		<p>More or less covertly did the prize in economics enter the minds of the general public, increasing the field’s credibility and prestige. Which may even be dangerous, according to the godfather of economy; none other than <a href="http://en.wikipedia.org/wiki/Friedrich_Hayek" target="_blank">Friedrich Hayek</a>:</p>
+		<blockquote id="hayek" class="golden">[I]f I had been consulted whether to establish a Nobel Prize in economics, I should have decidedly advised against it. […] One reason was that I feared that such a prize, as I believe is true of the activities of some of the great scientific foundations, would tend to accentuate the swings of scientific fashion. […] <strong>[T]he Nobel Prize confers on an individual an authority which in economics no man ought to possess.</strong> This does not matter in the natural sciences. Here the influence exercised by an individual is chiefly an influence on his fellow experts; and they will soon cut him down to size if he exceeds his competence. But the influence of the economist that mainly matters is an influence over laymen: politicians, journalists, civil servants and the public generally. There is no reason why a man who has made a distinctive contribution to economic science should be omnicompetent on all problems of society – as the press tends to treat him till in the end he may himself be persuaded to believe. […] <strong>I am not sure that it is desirable to strengthen the influence of a few individual economists by such a ceremonial and eye-catching recognition of achievements</strong>, perhaps of the distant past. […]<br />
+		<div class="right">– <a href="http://www.nobelprize.org/nobel_prizes/economic-sciences/laureates/1974/hayek-speech.html" target="_blank">“Friedrich August von Hayek – Banquet Speech”</a><br />
+		<em>Nobelprize.org</em>. Nobel Media AB 2013. Web. 2 Oct 2013.</div></blockquote>
+	</div>
 
 	<div id="footer">
 		<a class="email" href="mailto:{{ site.email }}" target="_blank">{{ site.email }}</a>
