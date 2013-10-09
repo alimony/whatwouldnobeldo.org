@@ -12,6 +12,7 @@
 	<meta property="og:image" content="{{ site.live_url }}/img/whatwouldnobeldo-200x200px.jpg" />
 	<meta property="og:site_name" content="{{ site.title }}" />
 	<meta property="og:description" content="{% if page.opengraph_description %}{{ page.opengraph_description }}{% else %}{{ site.opengraph_description }}{% endif %}" />
+	<link rel="canonical" href="{{ site.live_url }}{{ page.url | remove:'index.html' }}" />
 	<style>
 	body {
 		margin: 0;
@@ -172,7 +173,6 @@
 			}
 	}
 	</style>
-	<link rel="canonical" href="{{ site.live_url }}{{ page.url | remove:'index.html' }}" />
 	<script>
 	if (window.location.hostname === '{{ site.live_hostname }}') {
 		var _gaq = _gaq || [];
@@ -203,8 +203,8 @@
 		<h2>…<strong>not</strong> award a prize<br />
 		in economics!</h2>
 		<div class="share">
-			<div class="tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-text="{{ site.tweet_text }}">Tweet</a></div>
-			<div class="plusone"><div class="g-plusone" data-size="medium"></div></div>
+			<div class="tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-text="{{ site.tweet_text }}" data-url="{{ site.live_url }}{{ page.url | remove:'index.html' }}">Tweet</a></div>
+			<div class="plusone"><div class="g-plusone" data-size="medium" data-href="{{ site.live_url }}{{ page.url | remove:'index.html' }}"></div></div>
 			<div class="fb-like" data-href="{{ site.live_url }}{{ page.url | remove:'index.html' }}" data-send="false" data-width="704" data-show-faces="false"></div>
 		</div>
 	</div>
