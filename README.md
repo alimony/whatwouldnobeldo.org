@@ -11,5 +11,4 @@ Developing locally is as easy as running `jekyll serve --watch` from the root di
 
 ##### Thanks to the following people for providing comments and feedback:
 
-* Carin Ism
 * Håkan Waara
