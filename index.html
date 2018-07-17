@@ -36,24 +36,19 @@
 		border-bottom: 0.5em solid black;
 	}
 
-	.share {
+	#header .share {
 		position: absolute;
-		margin-left: -11px;
-		padding-bottom: 0.2em;
-		width: 100%;
-		overflow: hidden;
+		bottom: 0.5em;
 	}
 
-		.share .tweet {
-			float: left;
-			padding: 0 0 0.2em 10px;
-		}
+	#footer .share {
+		float: left;
+		text-align: left;
+	}
 
-		.share .plusone { float: left; }
-
-	#header .share { bottom: 0; }
-
-	#footer .share { top: 1em; }
+	.tweet {
+		margin-top: 3px;
+	}
 
 	#menu {
 		border-bottom: 0.1em solid #dbd9d7;
@@ -206,8 +201,8 @@
 		<h2>…<strong>not</strong> award a prize<br />
 		in economics!</h2>
 		<div class="share">
+			<div class="fb-like" data-share="true"></div>
 			<div class="tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-text="{{ site.tweet_text }}" data-url="{{ site.live_url }}{{ page.url | remove:'index.html' }}">Tweet</a></div>
-			<div class="fb-like" data-href="{{ site.live_url }}{{ page.url | remove:'index.html' }}" data-send="false" data-width="704" data-show-faces="false"></div>
 		</div>
 	</div>
 
@@ -282,9 +277,9 @@
 	<div id="footer">
 		<a class="email" href="mailto:{{ site.email }}">{{ site.email }}</a>
 		<div class="share">
+			<div class="fb-like" data-share="true"></div>
 			<div class="tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-text="{{ site.tweet_text }}">Tweet</a></div>
 			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-			<div class="fb-like" data-href="{{ site.live_url }}{{ page.url | remove:'index.html' }}" data-send="false" data-width="704" data-show-faces="false"></div>
 		</div>
 	</div>
 </div>
